@@ -5,50 +5,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Filter</title>
+    <link rel="stylesheet" href="./public/style/styles.css">
 </head>
 
 <body>
-    <div class="container">
-        <div class="searcForm">
-            <input type="search" name="search" placeholder="Search..." id="search">
+    <div class="flex">
+        <div class="flex-1">
+            <div class="wrapper">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis nesciunt in incidunt placeat
+                    repudiandae recusandae quos, voluptatibus, iste dolores sit vitae earum numquam mollitia doloremque
+                    quaerat porro quasi iusto itaque?
+                </p>
+            </div>
         </div>
-        <div class="wrapper">
-            <div id="result"></div>
+        <div class="flex-3">
+            <div class="container">
+                <div class="searcForm">
+                    <span><img src="./public/img/search-icon.webp" width="20px" height="20px" alt=""></span>
+                    <input type="search" name="search" placeholder="Search..." id="search">
+                </div>
+                <div class="wrapper">
+                    <div id="result"></div>
+                </div>
+            </div>
         </div>
     </div>
 </body>
 
-<script>
-    const display = document.getElementById("result"),
-        inputSearch = document.getElementById('search'),
-        urlAPIs = "https://jsonplaceholder.typicode.com/users"
-
-    const getData = async () => {
-        const res = await fetch(urlAPIs),
-            data = await res.json()
-        return data
-    }
-    const displayFunction = async () => {
-        let q = inputSearch.value
-        const payload = await getData()
-        let displayData = payload.filter(event => {
-            if (q === '') { return event }
-            else if (event.name.toLowerCase().includes(q.toLowerCase())) { return event }
-        }).map(object => {
-            const { name, id, username } = object
-            return `
-                <div id=${id}>
-                    <h3>${name}</h3>
-                    <p>${username}</p>
-                </div>
-            `
-        }).join("")
-        display.innerHTML = displayData
-    }
-    displayFunction()
-    inputSearch.addEventListener('input', function () {
-        displayFunction()
-    })
-</script>
+<script src="./public/js/main.js"></script>
 
 </html>

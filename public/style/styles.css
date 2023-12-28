@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,700;1,300;1,400;1,700&family=Dancing+Script:wght@400;500;600;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --font-family: Ubuntu, 'sans-serif';
+    --white: #fff;
+    --p: 20px;
+    --b: 20px;
+}
+
+body {
+    font-family: var(--font-family);
+    height: 100dvh;
+    background-image: url('../img/bg.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.flex {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.flex-1 {
+    position: relative;
+    top: 20px;
+    flex: 1;
+    width: 100%;
+    background-color: red;
+}
+
+.flex-1 .wrapper {
+    width: 100%;
+    background-color: var(--white);
+    position: relative;
+    top: 20px;
+
+}
+
+.flex-3 {
+    flex: 2;
+}
+
+
+.container {
+    width: 100%;
+    margin: 30px auto;
+}
+
+.searcForm,
+.wrapper {
+    display: block;
+    margin: 10px auto;
+}
+
+.searcForm {
+    position: sticky;
+    top: 5px;
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.56);
+    background-color: var(--white);
+    padding: var(--p);
+    border-radius: var(--b);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.searcForm input {
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    width: 90%;
+    background-color: transparent;
+    border: none;
+    outline: none !important;
+}
+
+.item {
+    background-color: var(--white);
+    padding: 20px 30px;
+    margin: 5px auto;
+    border-right: 9px solid red;
+    border-top-left-radius: var(--b);
+    border-bottom-left-radius: var(--b);
+}
