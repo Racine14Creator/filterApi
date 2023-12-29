@@ -46,13 +46,12 @@ body {
     background-color: var(--white);
     position: relative;
     top: 20px;
-
 }
 
 .flex-3 {
+    position: relative;
     flex: 2;
 }
-
 
 .container {
     width: 100%;
