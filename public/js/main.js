@@ -8,14 +8,22 @@ const getData = async () => {
         data = await res.json()
     return data
 }
+
 const displayFunction = async () => {
+
     let q = inputSearch.value
+
     const payload = await getData()
+
     let displayData = payload.filter(event => {
+
         if (q === '') { return event }
         else if (event.name.toLowerCase().includes(q.toLowerCase())) { return event }
+
     }).map(object => {
+
         const { name, id, username } = object
+
         return `
                 <div class="item" id=${id}>
                     <h3>${name}</h3>
