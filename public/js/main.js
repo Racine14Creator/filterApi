@@ -17,13 +17,14 @@ const displayFunction = async () => {
 
     let displayData = payload.filter(event => {
 
-        if (q === '') { return event }
-        else if (event.name.toLowerCase().includes(q.toLowerCase())) { return event }
+        if (q === '') { return event } else if (event.name.toLowerCase().includes(q.toLowerCase())) {
+            console.log(event)
+            return event;
 
+        }
     }).map(object => {
 
         const { name, id, username } = object
-
         return `
                 <div class="item" id=${id}>
                     <h3>${name}</h3>

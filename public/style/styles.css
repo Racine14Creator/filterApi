@@ -54,6 +54,11 @@ body {
     flex: 2;
 }
 
+span {
+    color: red;
+    font-weight: 700;
+}
+
 .container {
     width: 100%;
     margin: 30px auto;
@@ -76,6 +81,12 @@ body {
     align-items: center;
     justify-content: center;
 }
+
+.wrapper p {
+    font-size: 20px;
+    margin: 10px auto;
+}
+
 
 .searcForm input {
     padding: 10px;
